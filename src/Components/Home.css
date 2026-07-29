@@ -212,14 +212,11 @@
     line-height:1.8;
 
 }
-
-.achievement-grid{
-
+.achievement-grid {
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:25px;
-    margin-bottom: -80px;
-
+    margin-bottom:0;
 }
 
 .achievement-card{
@@ -317,11 +314,11 @@ font-size:55px;
 
 @media(max-width:576px){
 
-.achievement-grid{
+ .achievement-grid{
+        grid-template-columns:1fr;
+        margin-bottom:0;
+    }
 
-grid-template-columns:1fr;
-
-}
 
 .achievement-heading h2{
 
