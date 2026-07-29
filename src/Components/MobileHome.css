@@ -1,105 +1,66 @@
-.mobileHero{
+.mobileHero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.mobileVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-position:relative;
+    width: 100%;
+    height: 100%;
 
-width:100%;
+    object-fit: cover;
 
-height:100vh;
-
-overflow:hidden;
-
+    transform: translate(-50%, -50%);
 }
 
-.mobileImage{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
+/* Overlay */
+.mobileOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 1;
 }
 
-.mobileOverlay{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.45);
-
+/* Content */
+.mobileContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
 }
 
-.mobileContent{
-
-position:absolute;
-
-top:50%;
-
-left:50%;
-
-transform:translate(-50%,-50%);
-
-width:90%;
-
-text-align:center;
-
-color:#fff;
-
-z-index:2;
-
+.mobileContent span {
+    letter-spacing: 3px;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
-.mobileContent span{
-
-letter-spacing:3px;
-
-font-size:15px;
-
-text-transform:uppercase;
-
+.mobileContent h1 {
+    font-size: 38px;
+    margin: 15px 0;
+    line-height: 1.2;
 }
 
-.mobileContent h1{
-
-font-size:38px;
-
-margin:15px 0;
-
-line-height:1.2;
-
+.mobileContent p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 30px;
 }
 
-.mobileContent p{
-
-font-size:15px;
-
-line-height:28px;
-
-margin-bottom:30px;
-
-}
-
-.mobileBtn{
-
-display:inline-block;
-
-padding:14px 35px;
-
-background:#d4af37;
-
-color:#fff;
-
-text-decoration:none;
-
-border-radius:40px;
-
-font-weight:600;
-
+.mobileBtn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #d4af37;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
 }
