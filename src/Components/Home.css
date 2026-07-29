@@ -125,3 +125,409 @@
 }
 
 }
+/*===================================
+      ACHIEVEMENT SECTION
+====================================*/
+
+.achievement-section{
+
+    width:100%;
+    padding:100px 7%;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../images/img2.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+
+.achievement-heading{
+
+    text-align:center;
+    color:#fff;
+    margin-bottom:40px;
+
+}
+
+.achievement-heading span{
+
+    color:#e84c22;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+}
+
+.achievement-heading h2{
+
+    font-size:55px;
+    margin:15px 0;
+
+}
+
+.achievement-heading p{
+
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+
+}
+
+.achievement-grid{
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+    margin-bottom: -80px;
+
+}
+
+.achievement-card{
+
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.01);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    overflow:hidden;
+    transition:.4s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-10px);
+    background-color: #e84c22;
+
+}
+
+.number{
+
+    height:180px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:70px;
+    font-weight:700;
+    color:#fff;
+
+}
+
+.card-content{
+
+    background:#fff;
+    padding:35px 20px;
+    text-align:center;
+    border-radius:30px 30px 0 0;
+
+}
+
+.card-content h3{
+
+    color:#111;
+    margin-bottom:15px;
+    font-size:26px;
+
+}
+
+.card-content p{
+
+    color:#666;
+    line-height:1.7;
+
+}
+
+/*=============================
+        Responsive
+=============================*/
+
+@media(max-width:1200px){
+
+.achievement-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.achievement-heading h2{
+
+font-size:38px;
+
+}
+
+.achievement-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.number{
+
+height:150px;
+font-size:55px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.achievement-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.achievement-heading h2{
+
+font-size:30px;
+
+}
+
+}
+
+/*==========================
+      WHY CHOOSE US
+===========================*/
+
+.why-choose{
+
+    position:relative;
+    width:100%;
+    padding:120px 8%;
+    overflow:hidden;
+    background-color: #fff;
+
+}
+
+/* Moving Background */
+
+.why-choose::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:url("../images/bg.jpg") center/cover no-repeat;
+
+    animation:bgMove 18s linear infinite alternate;
+
+    transform:scale(1.15);
+
+    z-index:-2;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:-1;
+
+}
+
+/* Background Animation */
+
+@keyframes bgMove{
+
+0%{
+transform:scale(1.1) translateY(0);
+}
+
+100%{
+transform:scale(1.2) translateY(-40px);
+}
+
+}
+
+/* Layout */
+
+.why-container{
+
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:60px;
+align-items:center;
+
+}
+
+/* Left */
+
+.why-left span{
+
+color:#e84c22;
+font-weight:600;
+letter-spacing:2px;
+
+}
+
+.why-left h2{
+
+font-size:52px;
+color:#e84c22;
+margin:20px 0;
+
+}
+
+.why-left p{
+
+color:#666;
+line-height:1.9;
+margin-bottom:35px;
+
+}
+
+.explore-btn{
+
+display:inline-block;
+padding:14px 35px;
+background:#e84c22;
+color:#fff;
+border-radius:50px;
+transition:.4s;
+text-decoration: none;
+}
+
+.explore-btn:hover{
+
+background:#084298;
+
+}
+
+/* Right */
+
+.why-right{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+
+}
+
+.feature-card{
+    position:relative;
+    overflow:hidden;
+    padding:30px;
+    min-height:230px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    border-radius:20px;
+    transition:.4s;
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* Dark Overlay */
+
+.feature-card::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    transition:.4s;
+
+}
+
+.feature-card h3,
+.feature-card p{
+
+    position:relative;
+    z-index:2;
+    color:#fff;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+    
+
+}
+
+.feature-card:hover::before{
+
+    background:rgba(232,76,34,.35);
+
+}
+.card1{
+    background-image:url("../images/urban2.jpg");
+}
+
+.card2{
+    background-image:url("../images/road.jpg");
+}
+
+.card3{
+    background-image:url("../images/img3.jpg");
+}
+
+.card4{
+    background-image:url("../images/security.jpg");
+}
+
+.card5{
+    background-image:url("../images/return.jpg");
+}
+
+.card6{
+    background-image:url("../images/urban3.webp");
+}
+.feature-card h3{
+
+color:#fff;
+margin-bottom:15px;
+font-size:22px;
+
+}
+
+.feature-card p{
+
+color:#ddd;
+line-height:1.8;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.why-container{
+
+grid-template-columns:1fr;
+
+}
+
+.why-right{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.why-left h2{
+
+font-size:38px;
+
+}
+
+.why-right{
+
+grid-template-columns:1fr;
+
+}
+
+}
