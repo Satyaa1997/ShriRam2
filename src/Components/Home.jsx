@@ -1,9 +1,22 @@
-import React from "react";
+
 import "./Home.css";
+import React, { useEffect, useState } from "react";
 import heroVideo from "../assets/video.mp4";
 import Aminities from "./Aminities";
+import Footer from "./Footer";
+import Invest from "./Invest";
 
 const Home = () => {
+
+    const [hideContent, setHideContent] = useState(false);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setHideContent(true);
+  }, 5000);
+
+  return () => clearTimeout(timer);
+}, []);
   return (
   <>
     <section className="hero">
@@ -20,7 +33,7 @@ const Home = () => {
 
       <div className="hero-overlay"></div>
 
-      <div className="hero-content">
+       <div className={`hero-content ${hideContent ? "hide-content" : ""}`}>
 
         <span>Premium Township</span>
 
@@ -28,75 +41,13 @@ const Home = () => {
 
         <p>
           Experience luxury living surrounded by nature,
-          world-class amenities and thoughtfully planned spaces.
+          world-class amenities and thoughtfully planned. spaces.
         </p>
 
-        <a href="/contact" className="hero-btn">
-          Contact Now
-        </a>
 
       </div>
 
     </section>
-
-
-
-    <section className="achievement-section">
-
-  <div className="achievement-heading">
-    <span>WHY SHRI RAM FILM CITY</span>
-    <h2>Future-Ready Living</h2>
-    <p>
-      A premium township designed with modern infrastructure,
-      green spaces and world-class amenities.
-    </p>
-  </div>
-
-  <div className="achievement-grid">
-
-    <div className="achievement-card">
-      <div className="number">50+</div>
-      <div className="card-content">
-        <h3>Acres</h3>
-        <p>Premium Township Spread Across a Vast Landscape.</p>
-      </div>
-    </div>
-
-    <div className="achievement-card">
-      <div className="number">24×7</div>
-      <div className="card-content">
-        <h3>Security</h3>
-        <p>Advanced Security with CCTV & Gated Community.</p>
-      </div>
-    </div>
-
-    <div className="achievement-card">
-      <div className="number">100%</div>
-      <div className="card-content">
-        <h3>Green Zone</h3>
-        <p>Beautiful Parks, Landscapes & Eco-Friendly Living.</p>
-      </div>
-    </div>
-
-    <div className="achievement-card">
-      <div className="number">25+</div>
-      <div className="card-content">
-        <h3>Amenities</h3>
-        <p>Club House, Gym, Temple, Shopping & More.</p>
-      </div>
-    </div>
-
-    <div className="achievement-card">
-      <div className="number">1st</div>
-      <div className="card-content">
-        <h3>Film City</h3>
-        <p>One of the Most Unique Township Concepts in the Region.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
 
 
 <section className="why-choose">
@@ -164,12 +115,78 @@ const Home = () => {
 
 </section>
 
+    <section className="achievement-section">
+
+  <div className="achievement-heading">
+    <span>WHY SHRI RAM FILM CITY</span>
+    <h2>Future-Ready Living</h2>
+    <p>
+      A premium township designed with modern infrastructure,
+      green spaces and world-class amenities.
+    </p>
+  </div>
+
+  <div className="achievement-grid">
+
+    <div className="achievement-card">
+      <div className="number">50+</div>
+      <div className="card-content">
+        <h3>Acres</h3>
+        <p>Premium Township Spread Across a Vast Landscape.</p>
+      </div>
+    </div>
+
+    <div className="achievement-card">
+      <div className="number">24×7</div>
+      <div className="card-content">
+        <h3>Security</h3>
+        <p>Advanced Security with CCTV & Gated Community.</p>
+      </div>
+    </div>
+
+    <div className="achievement-card">
+      <div className="number">100%</div>
+      <div className="card-content">
+        <h3>Green Zone</h3>
+        <p>Beautiful Parks, Landscapes & Eco-Friendly Living.</p>
+      </div>
+    </div>
+
+    <div className="achievement-card">
+      <div className="number">25+</div>
+      <div className="card-content">
+        <h3>Amenities</h3>
+        <p>Club House, Gym, Temple, Shopping & More.</p>
+      </div>
+    </div>
+
+    <div className="achievement-card">
+      <div className="number">1st</div>
+      <div className="card-content">
+        <h3>Film City</h3>
+        <p>One of the Most Unique Township Concepts in the Region.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
 {/*-----------------Aminities--------------------*/}
 
 <Aminities />
 
+{/*-----------------Invest--------------------*/}
+
+<Invest />
 
 
+{/*-----------------Footer--------------------*/}
+
+<Footer />
   </>
   );
 };
