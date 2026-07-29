@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import heroVideo from "../assets/video.mp4";
+import Aminities from "./Aminities";
 
 const Home = () => {
   return (
@@ -129,32 +130,32 @@ const Home = () => {
     <div className="why-right">
 
       <div className="feature-card card1">
-  <h3>🏡 Premium Township</h3>
+  <h3> Premium Township</h3>
   <p>Beautifully planned residential and commercial development.</p>
 </div>
 
 <div className="feature-card card2">
-  <h3>🛣 Wide Roads</h3>
+  <h3> Wide Roads</h3>
   <p>Modern road network with proper drainage and street lights.</p>
 </div>
 
 <div className="feature-card card3">
-  <h3>🌳 Green Environment</h3>
+  <h3> Green Environment</h3>
   <p>Parks, gardens and eco-friendly surroundings for families.</p>
 </div>
 
 <div className="feature-card card4">
-  <h3>🛡 24×7 Security</h3>
+  <h3> 24×7 Security</h3>
   <p>Gated community with CCTV surveillance.</p>
 </div>
 
 <div className="feature-card card5">
-  <h3>📈 High Returns</h3>
+  <h3> High Returns</h3>
   <p>Excellent future appreciation and investment potential.</p>
 </div>
 
 <div className="feature-card card6">
-  <h3>📍 Prime Location</h3>
+  <h3>Prime Location</h3>
   <p>Excellent connectivity to Ayodhya city and highways.</p>
 </div>
     </div>
@@ -162,6 +163,13 @@ const Home = () => {
   </div>
 
 </section>
+
+{/*-----------------Aminities--------------------*/}
+
+<Aminities />
+
+
+
   </>
   );
 };

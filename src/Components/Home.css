@@ -444,14 +444,14 @@ gap:25px;
 
     position:relative;
     z-index:2;
-    color:#fff;
+    color:#e84c22;
 
 }
 
 .feature-card:hover{
 
     transform:translateY(-10px) scale(1.03);
-    
+
 
 }
 
@@ -487,13 +487,13 @@ gap:25px;
 
 color:#fff;
 margin-bottom:15px;
-font-size:22px;
+font-size:25px;
 
 }
 
 .feature-card p{
 
-color:#ddd;
+color:#fff;
 line-height:1.8;
 
 }
